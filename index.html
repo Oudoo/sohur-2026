@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sohur 2026 - Film Khana Studios</title>
+    <style>
+        body {
+            /* Dark background to match the edges of your image */
+            background-color: #0d1615; 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .invitation-container {
+            position: relative;
+            width: 100%;
+            /* Limits the maximum size on desktop so it doesn't get overly huge */
+            max-width: 600px; 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .invitation-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* The invisible clickable area for the QR Code */
+        .qr-link {
+            position: absolute;
+            /* These percentages perfectly map to the QR code's position on your image */
+            top: 73.5%;
+            left: 53.5%;
+            width: 21%;
+            height: 14.5%;
+            z-index: 10;
+            cursor: pointer;
+            
+            /* Optional: Uncomment the line below (remove the //) if you want to see a red box to verify the placement */
+            /* background-color: rgba(255, 0, 0, 0.3); */
+        }
+        
+        /* Adds a subtle click/tap effect so users know it worked */
+        .qr-link:active {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="invitation-container">
+        <!-- Make sure the src matches your exact image file name -->
+        <img src="invitation.png" alt="Sohur 2026 Invitation">
+        
+        <!-- The invisible link pointing to your Google Maps URL -->
+        <a href="https://maps.app.goo.gl/ZtzmCp6pkKNobf2h8?g_st=iw" 
+           target="_blank" 
+           class="qr-link" 
+           title="Click to open location in Google Maps"
+           aria-label="Open location in Google Maps">
+        </a>
+    </div>
+
+</body>
+</html>
